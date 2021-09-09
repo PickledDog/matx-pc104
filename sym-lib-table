@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name matx-pc104)(type Legacy)(uri ${KIPRJMOD}/matx-pc104.lib)(options "")(descr ""))
+)

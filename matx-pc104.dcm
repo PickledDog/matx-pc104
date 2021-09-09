@@ -1,0 +1,20 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP +5VSB
+D Power symbol creates a global label with name "+5VSB"
+K power-flag
+$ENDCMP
+#
+$CMP Conn_02x05_Delete10
+D Generic connector, double row, 02x05, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
+$CMP Dual_USB_A
+D Dual USB Type A connector, stacked
+K connector USB stacked
+F  ~
+$ENDCMP
+#
+#End Doc Library
