@@ -2520,7 +2520,7 @@ U 1 1 63A8BD0D
 P 900 5350
 F 0 "R12" H 970 5396 50  0000 L CNN
 F 1 "20" H 970 5305 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_Power_L20.0mm_W6.4mm_P25.40mm" V 830 5350 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_Power_L25.0mm_W6.4mm_P30.48mm" V 830 5350 50  0001 C CNN
 F 3 "~" H 900 5350 50  0001 C CNN
 	1    900  5350
 	1    0    0    -1  
@@ -2585,10 +2585,10 @@ Wire Wire Line
 	4200 1650 4100 1650
 Connection ~ 4100 1650
 $Comp
-L Connector_Generic:Conn_01x03 J11
+L Connector_Generic:Conn_01x03 J13
 U 1 1 641D9FD6
 P 2250 3650
-F 0 "J11" V 2350 3650 50  0000 C CNN
+F 0 "J13" V 2350 3650 50  0000 C CNN
 F 1 "Fan3" V 2250 3300 50  0000 L CNN
 F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 2250 3650 50  0001 C CNN
 F 3 "~" H 2250 3650 50  0001 C CNN
@@ -3033,92 +3033,28 @@ PWR_A
 Text Label 6350 3750 2    50   ~ 0
 PWR_B
 Text Label 5250 3650 0    50   ~ 0
-RESET
+RST_A
 Wire Wire Line
-	5550 3650 4850 3650
+	6050 3750 6150 3750
 Wire Wire Line
-	6050 3750 6550 3750
+	6050 3550 6650 3550
 Wire Wire Line
-	6050 3650 6750 3650
-$Comp
-L power:GND #PWR0129
-U 1 1 6D01D01A
-P 6450 4000
-F 0 "#PWR0129" H 6450 3750 50  0001 C CNN
-F 1 "GND" H 6455 3827 50  0000 C CNN
-F 2 "" H 6450 4000 50  0001 C CNN
-F 3 "" H 6450 4000 50  0001 C CNN
-	1    6450 4000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 3550 6450 3550
-Wire Wire Line
-	6450 3550 6450 4000
-$Comp
-L Device:R R9
-U 1 1 6D3A8FF3
-P 6450 3200
-F 0 "R9" H 6520 3246 50  0000 L CNN
-F 1 "330" H 6520 3155 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6380 3200 50  0001 C CNN
-F 3 "~" H 6450 3200 50  0001 C CNN
-	1    6450 3200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 3450 6450 3450
-Wire Wire Line
-	6450 3450 6450 3350
+	6050 3450 6650 3450
 $Comp
 L power:+5V #PWR0130
 U 1 1 6D4412C9
-P 6450 2950
-F 0 "#PWR0130" H 6450 2800 50  0001 C CNN
-F 1 "+5V" H 6465 3123 50  0000 C CNN
-F 2 "" H 6450 2950 50  0001 C CNN
-F 3 "" H 6450 2950 50  0001 C CNN
-	1    6450 2950
+P 6650 2950
+F 0 "#PWR0130" H 6650 2800 50  0001 C CNN
+F 1 "+5V" H 6665 3123 50  0000 C CNN
+F 2 "" H 6650 2950 50  0001 C CNN
+F 3 "" H 6650 2950 50  0001 C CNN
+	1    6650 2950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6450 2950 6450 3050
 Text Label 6100 3450 0    50   ~ 0
 PWR_LED
-$Comp
-L power:+5V #PWR0131
-U 1 1 6D8F9CAB
-P 5150 2950
-F 0 "#PWR0131" H 5150 2800 50  0001 C CNN
-F 1 "+5V" H 5165 3123 50  0000 C CNN
-F 2 "" H 5150 2950 50  0001 C CNN
-F 3 "" H 5150 2950 50  0001 C CNN
-	1    5150 2950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R10
-U 1 1 6D8F9D1D
-P 5150 3200
-F 0 "R10" H 5220 3246 50  0000 L CNN
-F 1 "100" H 5220 3155 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5080 3200 50  0001 C CNN
-F 3 "~" H 5150 3200 50  0001 C CNN
-	1    5150 3200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5150 3050 5150 2950
-Wire Wire Line
-	5150 3350 5150 3750
-Wire Wire Line
-	5150 3750 5550 3750
 Text Label 5250 3750 0    50   ~ 0
-RST_SW
-Wire Wire Line
-	5550 3550 4950 3550
-Wire Wire Line
-	4950 3450 5550 3450
+RST_B
 Text Label 5250 3450 0    50   ~ 0
 HDD_A
 Text Label 5250 3550 0    50   ~ 0
@@ -3151,37 +3087,6 @@ F 3 "~" H 4750 2000 50  0001 C CNN
 	1    4750 2000
 	1    0    0    -1  
 $EndComp
-$Comp
-L Switch:SW_Push SW2
-U 1 1 6E6AF580
-P 4850 3850
-F 0 "SW2" V 4896 3802 50  0000 R CNN
-F 1 "Reset" V 4805 3802 50  0000 R CNN
-F 2 "Button_Switch_THT:SW_PUSH-12mm" H 4850 4050 50  0001 C CNN
-F 3 "~" H 4850 4050 50  0001 C CNN
-	1    4850 3850
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Switch:SW_Push SW1
-U 1 1 6E6AF6B6
-P 6750 3850
-F 0 "SW1" V 6704 3998 50  0000 L CNN
-F 1 "Power" V 6795 3998 50  0000 L CNN
-F 2 "Button_Switch_THT:SW_PUSH-12mm" H 6750 4050 50  0001 C CNN
-F 3 "~" H 6750 4050 50  0001 C CNN
-	1    6750 3850
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6550 3750 6550 4050
-Wire Wire Line
-	5150 4050 5150 3750
-Connection ~ 5150 3750
-Wire Wire Line
-	6550 4050 6750 4050
-Wire Wire Line
-	4850 4050 5150 4050
 Text Label 7050 1900 2    50   ~ 0
 PWR_B
 Text Label 7050 1800 2    50   ~ 0
@@ -3615,8 +3520,8 @@ L Device:C C14
 U 1 1 675EA6B1
 P 11750 2400
 F 0 "C14" H 11865 2446 50  0000 L CNN
-F 1 "0.1uF" H 11865 2355 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D3.0mm_W1.6mm_P2.50mm" H 11788 2250 50  0001 C CNN
+F 1 "1uF" H 11865 2355 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 11788 2250 50  0001 C CNN
 F 3 "~" H 11750 2400 50  0001 C CNN
 	1    11750 2400
 	1    0    0    1   
@@ -3826,10 +3731,10 @@ Wire Wire Line
 Text Label 1000 600  0    50   ~ 0
 ~PWR_CTRL
 $Comp
-L Connector:RJ45_LED_Shielded J14
+L Connector:RJ45_LED_Shielded J17
 U 1 1 6C84E501
 P 14400 7150
-F 0 "J14" H 14400 7817 50  0000 C CNN
+F 0 "J17" H 14400 7817 50  0000 C CNN
 F 1 "Ethernet" H 14400 7726 50  0000 C CNN
 F 2 "Connector_RJ:RJ45_Amphenol_RJHSE538X" V 14400 7175 50  0001 C CNN
 F 3 "~" V 14400 7175 50  0001 C CNN
@@ -3837,32 +3742,32 @@ F 3 "~" V 14400 7175 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Mini-DIN-6 J15
+L Connector:Mini-DIN-6 J19
 U 1 1 6C85225E
 P 12750 3350
-F 0 "J15" H 12750 3717 50  0000 C CNN
+F 0 "J19" H 12750 3717 50  0000 C CNN
 F 1 "Keyboard" H 12750 3626 50  0000 C CNN
-F 2 "PD_Parts:Mini-DIN-6-Socket" H 12750 3350 50  0001 C CNN
+F 2 "matx-pc104:Mini-DIN-6-Socket" H 12750 3350 50  0001 C CNN
 F 3 "http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf" H 12750 3350 50  0001 C CNN
 	1    12750 3350
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Mini-DIN-6 J16
+L Connector:Mini-DIN-6 J21
 U 1 1 6C853B1E
 P 12750 4300
-F 0 "J16" H 12750 4667 50  0000 C CNN
+F 0 "J21" H 12750 4667 50  0000 C CNN
 F 1 "Mouse" H 12750 4576 50  0000 C CNN
-F 2 "PD_Parts:Mini-DIN-6-Socket" H 12750 4300 50  0001 C CNN
+F 2 "matx-pc104:Mini-DIN-6-Socket" H 12750 4300 50  0001 C CNN
 F 3 "http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf" H 12750 4300 50  0001 C CNN
 	1    12750 4300
 	1    0    0    -1  
 $EndComp
 $Comp
-L matx-pc104:Dual_USB_A J17
+L matx-pc104:Dual_USB_A J23
 U 1 1 6C8589AD
 P 12900 5650
-F 0 "J17" H 12957 6117 50  0000 C CNN
+F 0 "J23" H 12957 6117 50  0000 C CNN
 F 1 "USB" H 12957 6026 50  0000 C CNN
 F 2 "Connector_USB:USB_A_Wuerth_61400826021_Horizontal_Stacked" H 13050 5600 50  0001 C CNN
 F 3 " ~" H 13050 5600 50  0001 C CNN
@@ -4003,7 +3908,7 @@ U 1 1 63A8D582
 P 1300 5350
 F 0 "R13" H 1370 5396 50  0000 L CNN
 F 1 "4.7" H 1370 5305 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_Power_L20.0mm_W6.4mm_P25.40mm" V 1230 5350 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_Power_L25.0mm_W6.4mm_P30.48mm" V 1230 5350 50  0001 C CNN
 F 3 "~" H 1300 5350 50  0001 C CNN
 	1    1300 5350
 	1    0    0    -1  
@@ -4093,10 +3998,10 @@ Wire Wire Line
 Wire Wire Line
 	16450 3550 16250 3550
 $Comp
-L Device:R R11
+L Device:R R10
 U 1 1 739A60D2
 P 14350 4350
-F 0 "R11" H 14420 4396 50  0000 L CNN
+F 0 "R10" H 14420 4396 50  0000 L CNN
 F 1 "1k" H 14420 4305 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 14280 4350 50  0001 C CNN
 F 3 "~" H 14350 4350 50  0001 C CNN
@@ -4210,25 +4115,14 @@ DIC1_CC
 Text Label 15050 2150 0    50   ~ 0
 DIG2_CC
 $Comp
-L Connector_Generic:Conn_02x05_Odd_Even J19
+L Connector_Generic:Conn_02x05_Odd_Even J15
 U 1 1 78409096
 P 11450 3800
-F 0 "J19" H 11500 4217 50  0000 C CNN
+F 0 "J15" H 11500 4217 50  0000 C CNN
 F 1 "VGA" H 11500 4126 50  0000 C CNN
 F 2 "Connector_PinHeader_2.00mm:PinHeader_2x05_P2.00mm_Vertical" H 11450 3800 50  0001 C CNN
 F 3 "~" H 11450 3800 50  0001 C CNN
 	1    11450 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:DB15_Female_HighDensity_MountingHoles J13
-U 1 1 6C850410
-P 10250 4000
-F 0 "J13" H 10250 4867 50  0000 C CNN
-F 1 "VGA" H 10250 4776 50  0000 C CNN
-F 2 "PD_Parts:DSUB-15-HD_Female_Horizontal_P2.29x2.54mm_Housed" H 9300 4400 50  0001 C CNN
-F 3 " ~" H 9300 4400 50  0001 C CNN
-	1    10250 4000
 	1    0    0    -1  
 $EndComp
 Text Label 9650 3600 0    50   ~ 0
@@ -4386,10 +4280,10 @@ E_L2-
 Text Label 13700 7450 0    50   ~ 0
 E_L2+
 $Comp
-L Connector_Generic:Conn_02x04_Odd_Even J21
+L Connector_Generic:Conn_02x04_Odd_Even J18
 U 1 1 7DA56BCE
 P 13000 6850
-F 0 "J21" H 13050 7167 50  0000 C CNN
+F 0 "J18" H 13050 7167 50  0000 C CNN
 F 1 "Ethernet" H 13050 7076 50  0000 C CNN
 F 2 "Connector_PinHeader_2.00mm:PinHeader_2x04_P2.00mm_Vertical" H 13000 6850 50  0001 C CNN
 F 3 "~" H 13000 6850 50  0001 C CNN
@@ -4464,10 +4358,10 @@ K_5V
 Wire Wire Line
 	12350 3350 12450 3350
 $Comp
-L Connector_Generic:Conn_01x05 J23
+L Connector_Generic:Conn_01x05 J22
 U 1 1 8066168E
 P 13750 4400
-F 0 "J23" H 13750 4800 50  0000 C CNN
+F 0 "J22" H 13750 4800 50  0000 C CNN
 F 1 "Mouse" H 13750 4700 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 13750 4400 50  0001 C CNN
 F 3 "~" H 13750 4400 50  0001 C CNN
@@ -4475,10 +4369,10 @@ F 3 "~" H 13750 4400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L matx-pc104:Dual_USB_A J17
+L matx-pc104:Dual_USB_A J23
 U 2 1 823C153C
 P 13800 5650
-F 0 "J17" H 13857 6117 50  0000 C CNN
+F 0 "J23" H 13857 6117 50  0000 C CNN
 F 1 "USB" H 13857 6026 50  0000 C CNN
 F 2 "Connector_USB:USB_A_Wuerth_61400826021_Horizontal_Stacked" H 13950 5600 50  0001 C CNN
 F 3 " ~" H 13950 5600 50  0001 C CNN
@@ -4610,10 +4504,10 @@ Connection ~ 13200 8800
 Wire Wire Line
 	13200 8800 13200 8750
 $Comp
-L Connector_Generic:Conn_02x05_Odd_Even J25
+L Connector_Generic:Conn_02x05_Odd_Even J26
 U 1 1 88C3DA31
 P 14150 8500
-F 0 "J25" H 14200 8917 50  0000 C CNN
+F 0 "J26" H 14200 8917 50  0000 C CNN
 F 1 "Serial" H 14200 8826 50  0000 C CNN
 F 2 "Connector_PinHeader_2.00mm:PinHeader_2x05_P2.00mm_Vertical" H 14150 8500 50  0001 C CNN
 F 3 "~" H 14150 8500 50  0001 C CNN
@@ -4658,10 +4552,10 @@ Wire Wire Line
 Wire Wire Line
 	13850 8500 13950 8500
 $Comp
-L Connector_Generic:Conn_01x05 J22
+L Connector_Generic:Conn_01x05 J20
 U 1 1 80660599
 P 13750 3450
-F 0 "J22" H 13668 3867 50  0000 C CNN
+F 0 "J20" H 13668 3867 50  0000 C CNN
 F 1 "Keyboard" H 13668 3776 50  0000 C CNN
 F 2 "Connector_JST:JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical" H 13750 3450 50  0001 C CNN
 F 3 "~" H 13750 3450 50  0001 C CNN
@@ -4669,26 +4563,15 @@ F 3 "~" H 13750 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 J9
+L Connector_Generic:Conn_01x03 J11
 U 1 1 6415D3DE
 P 1050 3650
-F 0 "J9" V 1150 3600 50  0000 L CNN
+F 0 "J11" V 1150 3600 50  0000 L CNN
 F 1 "Fan1" V 1050 3300 50  0000 L CNN
 F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 1050 3650 50  0001 C CNN
 F 3 "~" H 1050 3650 50  0001 C CNN
 	1    1050 3650
 	0    -1   -1   0   
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J12
-U 1 1 6DA2BDA9
-P 4750 3450
-F 0 "J12" H 4750 3650 50  0000 C CNN
-F 1 "HDD_LED" H 4650 3550 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4750 3450 50  0001 C CNN
-F 3 "~" H 4750 3450 50  0001 C CNN
-	1    4750 3450
-	-1   0    0    -1  
 $EndComp
 Text Label 12050 3700 2    50   ~ 0
 V_GND
@@ -4711,10 +4594,10 @@ NoConn ~ 14800 6850
 NoConn ~ 14800 7050
 NoConn ~ 14800 7150
 $Comp
-L Connector_Generic:Conn_01x04 J20
+L Connector_Generic:Conn_01x04 J16
 U 1 1 8D6CF249
 P 11050 4400
-F 0 "J20" H 10968 4717 50  0000 C CNN
+F 0 "J16" H 10968 4717 50  0000 C CNN
 F 1 "VGA_DDC" H 10968 4626 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 11050 4400 50  0001 C CNN
 F 3 "~" H 11050 4400 50  0001 C CNN
@@ -4791,10 +4674,10 @@ Wire Wire Line
 	15400 6100 14700 6100
 Connection ~ 14700 6100
 $Comp
-L Connector:DB9_Male_MountingHoles J18
+L Connector:DB9_Male_MountingHoles J25
 U 1 1 6C84C80E
 P 13200 8150
-F 0 "J18" H 13380 8152 50  0000 L CNN
+F 0 "J25" H 13380 8152 50  0000 L CNN
 F 1 "Serial" H 13380 8061 50  0000 L CNN
 F 2 "Connector_Dsub:DSUB-9_Male_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm" H 13200 8150 50  0001 C CNN
 F 3 " ~" H 13200 8150 50  0001 C CNN
@@ -4851,10 +4734,10 @@ $EndComp
 Wire Wire Line
 	2300 5950 2300 5850
 $Comp
-L Connector_Generic:Conn_01x03 J10
+L Connector_Generic:Conn_01x03 J12
 U 1 1 71E325C1
 P 1650 3650
-F 0 "J10" V 1750 3650 50  0000 C CNN
+F 0 "J12" V 1750 3650 50  0000 C CNN
 F 1 "Fan2" V 1650 3300 50  0000 L CNN
 F 2 "Connector:FanPinHeader_1x03_P2.54mm_Vertical" H 1650 3650 50  0001 C CNN
 F 3 "~" H 1650 3650 50  0001 C CNN
@@ -4906,14 +4789,128 @@ F 3 "~" H 2300 5700 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R14
+L Device:R R11
 U 1 1 928EFF04
 P 2300 5300
-F 0 "R14" H 2230 5254 50  0000 R CNN
+F 0 "R11" H 2230 5254 50  0000 R CNN
 F 1 "1k" H 2230 5345 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2230 5300 50  0001 C CNN
 F 3 "~" H 2300 5300 50  0001 C CNN
 	1    2300 5300
 	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6150 4150 6150 3750
+Connection ~ 6150 3750
+Wire Wire Line
+	6150 3750 6350 3750
+Connection ~ 5450 3750
+Wire Wire Line
+	5450 3750 5550 3750
+Wire Wire Line
+	5550 3550 5050 3550
+Wire Wire Line
+	5050 3450 5550 3450
+$Comp
+L Connector_Generic:Conn_01x02 J9
+U 1 1 6DA2BDA9
+P 4850 3450
+F 0 "J9" H 4950 3450 50  0000 L CNN
+F 1 "HDD_IN" H 4950 3350 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4850 3450 50  0001 C CNN
+F 3 "~" H 4850 3450 50  0001 C CNN
+	1    4850 3450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 3750 5450 3750
+Wire Wire Line
+	5050 3650 5150 3650
+$Comp
+L Connector_Generic:Conn_01x02 J10
+U 1 1 6169BC02
+P 4850 3650
+F 0 "J10" H 4950 3650 50  0000 L CNN
+F 1 "RST_IN" H 4950 3550 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4850 3650 50  0001 C CNN
+F 3 "~" H 4850 3650 50  0001 C CNN
+	1    4850 3650
+	-1   0    0    -1  
+$EndComp
+Connection ~ 5150 3650
+Wire Wire Line
+	5150 3650 5550 3650
+Wire Wire Line
+	6650 3450 6650 3350
+Wire Wire Line
+	6650 2950 6650 3050
+$Comp
+L Device:R R9
+U 1 1 6D3A8FF3
+P 6650 3200
+F 0 "R9" H 6720 3246 50  0000 L CNN
+F 1 "330" H 6720 3155 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6580 3200 50  0001 C CNN
+F 3 "~" H 6650 3200 50  0001 C CNN
+	1    6650 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 3650 6550 3650
+$Comp
+L Switch:SW_Push SW1
+U 1 1 6E6AF6B6
+P 6350 4150
+F 0 "SW1" H 6350 4300 50  0000 C CNN
+F 1 "Power" H 6350 4400 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH-12mm" H 6350 4350 50  0001 C CNN
+F 3 "~" H 6350 4350 50  0001 C CNN
+	1    6350 4150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 3550 6650 4200
+$Comp
+L power:GND #PWR0129
+U 1 1 6D01D01A
+P 6650 4200
+F 0 "#PWR0129" H 6650 3950 50  0001 C CNN
+F 1 "GND" H 6655 4027 50  0000 C CNN
+F 2 "" H 6650 4200 50  0001 C CNN
+F 3 "" H 6650 4200 50  0001 C CNN
+	1    6650 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 4150 5450 3750
+$Comp
+L Switch:SW_Push SW2
+U 1 1 6E6AF580
+P 5250 4150
+F 0 "SW2" H 5250 4300 50  0000 C CNN
+F 1 "Reset" H 5250 4400 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH-12mm" H 5250 4350 50  0001 C CNN
+F 3 "~" H 5250 4350 50  0001 C CNN
+	1    5250 4150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 3850 5150 3650
+Wire Wire Line
+	5050 4150 5050 3850
+Wire Wire Line
+	5050 3850 5150 3850
+Wire Wire Line
+	6550 3650 6550 4150
+$Comp
+L Connector:DB15_Female_HighDensity_MountingHoles J14
+U 1 1 6C850410
+P 10250 4000
+F 0 "J14" H 10250 4867 50  0000 C CNN
+F 1 "VGA" H 10250 4776 50  0000 C CNN
+F 2 "matx-pc104:DSUB-15-HD_Female_Horizontal_P2.29x2.54mm_Housed" H 9300 4400 50  0001 C CNN
+F 3 " ~" H 9300 4400 50  0001 C CNN
+	1    10250 4000
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
