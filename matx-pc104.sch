@@ -3703,34 +3703,6 @@ Wire Wire Line
 NoConn ~ 13050 1950
 NoConn ~ 13450 1950
 $Comp
-L Device:Jumper_NC_Dual JP1
-U 1 1 6B80C07F
-P 1400 850
-F 0 "JP1" V 1446 952 50  0000 L CNN
-F 1 "ForceOn" V 1355 952 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1400 850 50  0001 C CNN
-F 3 "~" H 1400 850 50  0001 C CNN
-	1    1400 850 
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR01
-U 1 1 6C67EB2D
-P 1400 1200
-F 0 "#PWR01" H 1400 950 50  0001 C CNN
-F 1 "GND" H 1405 1027 50  0000 C CNN
-F 2 "" H 1400 1200 50  0001 C CNN
-F 3 "" H 1400 1200 50  0001 C CNN
-	1    1400 1200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1400 1100 1400 1200
-Wire Wire Line
-	1400 600  1000 600 
-Text Label 1000 600  0    50   ~ 0
-~PWR_CTRL
-$Comp
 L Connector:RJ45_LED_Shielded J17
 U 1 1 6C84E501
 P 14400 7150
@@ -3755,12 +3727,12 @@ $EndComp
 $Comp
 L Connector:Mini-DIN-6 J21
 U 1 1 6C853B1E
-P 12750 4300
-F 0 "J21" H 12750 4667 50  0000 C CNN
-F 1 "Mouse" H 12750 4576 50  0000 C CNN
-F 2 "matx-pc104:Mini-DIN-6-Socket" H 12750 4300 50  0001 C CNN
-F 3 "http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf" H 12750 4300 50  0001 C CNN
-	1    12750 4300
+P 12750 4350
+F 0 "J21" H 12750 4717 50  0000 C CNN
+F 1 "Mouse" H 12750 4626 50  0000 C CNN
+F 2 "matx-pc104:Mini-DIN-6-Socket" H 12750 4350 50  0001 C CNN
+F 3 "http://service.powerdynamics.com/ec/Catalog17/Section%2011.pdf" H 12750 4350 50  0001 C CNN
+	1    12750 4350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -4317,34 +4289,34 @@ E_L2+
 $Comp
 L power:GND #PWR0144
 U 1 1 7F2F65CF
-P 13150 4650
-F 0 "#PWR0144" H 13150 4400 50  0001 C CNN
-F 1 "GND" H 13155 4477 50  0000 C CNN
-F 2 "" H 13150 4650 50  0001 C CNN
-F 3 "" H 13150 4650 50  0001 C CNN
-	1    13150 4650
+P 13150 4700
+F 0 "#PWR0144" H 13150 4450 50  0001 C CNN
+F 1 "GND" H 13155 4527 50  0000 C CNN
+F 2 "" H 13150 4700 50  0001 C CNN
+F 3 "" H 13150 4700 50  0001 C CNN
+	1    13150 4700
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	13150 4650 13150 4500
+	13150 4700 13150 4550
 Wire Wire Line
-	13150 4300 13050 4300
-NoConn ~ 12450 4400
-NoConn ~ 12450 4200
+	13150 4350 13050 4350
+NoConn ~ 12450 4450
+NoConn ~ 12450 4250
 NoConn ~ 12450 3450
 NoConn ~ 12450 3250
-Text Label 13250 4600 0    50   ~ 0
+Text Label 13250 4650 0    50   ~ 0
 M_5V
 Wire Wire Line
-	12350 4300 12450 4300
-Text Label 13250 4200 0    50   ~ 0
+	12350 4350 12450 4350
+Text Label 13250 4250 0    50   ~ 0
 M_CLK
-Text Label 13250 4300 0    50   ~ 0
+Text Label 13250 4350 0    50   ~ 0
 M_DAT
 Wire Wire Line
-	13250 4400 13050 4400
+	13250 4450 13050 4450
 Wire Wire Line
-	13550 4200 13050 4200
+	13550 4250 13050 4250
 Text Label 13250 3250 0    50   ~ 0
 K_CLK
 Text Label 13250 3350 0    50   ~ 0
@@ -4357,17 +4329,6 @@ Text Label 13250 3650 0    50   ~ 0
 K_5V
 Wire Wire Line
 	12350 3350 12450 3350
-$Comp
-L Connector_Generic:Conn_01x05 J22
-U 1 1 8066168E
-P 13750 4400
-F 0 "J22" H 13750 4800 50  0000 C CNN
-F 1 "Mouse" H 13750 4700 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 13750 4400 50  0001 C CNN
-F 3 "~" H 13750 4400 50  0001 C CNN
-	1    13750 4400
-	1    0    0    -1  
-$EndComp
 $Comp
 L matx-pc104:Dual_USB_A J23
 U 2 1 823C153C
@@ -4640,19 +4601,19 @@ Wire Wire Line
 Wire Wire Line
 	13150 3550 13150 3350
 Wire Wire Line
-	13250 4400 13250 4300
+	13250 4450 13250 4350
 Wire Wire Line
-	13250 4300 13550 4300
+	13250 4350 13550 4350
 Wire Wire Line
-	13550 4500 13150 4500
-Connection ~ 13150 4500
+	13550 4550 13150 4550
+Connection ~ 13150 4550
 Wire Wire Line
-	13150 4500 13150 4300
+	13150 4550 13150 4350
 Wire Wire Line
-	12350 4300 12350 4600
+	12350 4350 12350 4650
 Wire Wire Line
-	12350 4600 13550 4600
-NoConn ~ 13550 4400
+	12350 4650 13550 4650
+NoConn ~ 13550 4450
 Wire Wire Line
 	14100 5750 14400 5750
 Wire Wire Line
@@ -4913,4 +4874,60 @@ F 3 " ~" H 9300 4400 50  0001 C CNN
 	1    10250 4000
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J22
+U 1 1 8066168E
+P 13750 4450
+F 0 "J22" H 13750 4850 50  0000 C CNN
+F 1 "Mouse" H 13750 4750 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 13750 4450 50  0001 C CNN
+F 3 "~" H 13750 4450 50  0001 C CNN
+	1    13750 4450
+	1    0    0    -1  
+$EndComp
+Text Label 950  600  0    50   ~ 0
+~PWR_CTRL
+Wire Wire Line
+	1350 600  950  600 
+$Comp
+L power:GND #PWR01
+U 1 1 6C67EB2D
+P 1350 1200
+F 0 "#PWR01" H 1350 950 50  0001 C CNN
+F 1 "GND" H 1355 1027 50  0000 C CNN
+F 2 "" H 1350 1200 50  0001 C CNN
+F 3 "" H 1350 1200 50  0001 C CNN
+	1    1350 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 1100 1350 1200
+$Comp
+L Jumper:Jumper_3_Open JP1
+U 1 1 6B80C07F
+P 1350 850
+F 0 "JP1" V 1396 952 50  0000 L CNN
+F 1 "ForceOn" V 1305 952 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1350 850 50  0001 C CNN
+F 3 "~" H 1350 850 50  0001 C CNN
+	1    1350 850 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Jumper:Jumper_2_Open JP2
+U 1 1 627D711E
+P 12350 3950
+F 0 "JP2" V 12200 3850 50  0000 R CNN
+F 1 "K_5V=M_5V" V 12275 3850 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 12350 3950 50  0001 C CNN
+F 3 "~" H 12350 3950 50  0001 C CNN
+	1    12350 3950
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	12350 3750 12350 3650
+Connection ~ 12350 3650
+Wire Wire Line
+	12350 4150 12350 4350
+Connection ~ 12350 4350
 $EndSCHEMATC
